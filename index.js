@@ -2,5 +2,18 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 "/"];
 
 
+let password1 = document.getElementById("password-1")
+let password2 = document.getElementById("password-2")
+
+function generatePassword() {
+    password1.textContent = ''
+    password2.textContent = ''
+    for (let i = 0; i < 15; i++) { 
+    let randomNum1 = Math.floor(Math.random() * characters.length)
+    let randomNum2 = Math.floor(Math.random() * characters.length)
+    password1.textContent += characters[randomNum1]
+    password2.textContent += characters[randomNum2]
+ }
+}
 
 
